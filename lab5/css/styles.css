@@ -1,0 +1,95 @@
+#hero_container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+#hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 30px;
+    background: rgb(46,49,146) url(/sites/default/files/styles/hero/public/2025/2/17/news/30133/lptopvyb.png) no-repeat center top;
+}
+
+#hero .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#hero .container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 40px;
+}
+
+#hero h2 {
+    margin: 0;
+    padding: 0 15px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+#hero h2 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.shortcut-1, .shortcut-2, .shortcut-3, .shortcut-4 {
+    padding: 20px;
+    text-align: center;
+}
+
+.shortcut-1 h2, .shortcut-2 h2, .shortcut-3 h2, .shortcut-4 h2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    color: #2e3192;
+}
+
+.shortcut-1 svg, .shortcut-2 svg, .shortcut-3 svg, .shortcut-4 svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.shortcut-1 span, .shortcut-2 span, .shortcut-3 span, .shortcut-4 span {
+    vertical-align: middle;
+}
+
+.col-xs-6 {
+    width: 50%;
+}
+
+@media (min-width: 768px) {
+    .col-sm-3 {
+        width: 25%;
+    }
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
