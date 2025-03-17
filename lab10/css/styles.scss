@@ -1,0 +1,185 @@
+// Змінні
+$primary-color: #3498db;
+$secondary-color: #f4f4f4;
+$text-color: #333;
+$breakpoints: (
+    mobile: 576px,
+    tablet: 768px,
+    desktop: 1024px
+);
+
+// Міксини
+@mixin respond-to($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+}
+
+// Глобальні стилі
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: $text-color;
+}
+
+header {
+    background-color: $primary-color;
+    color: white;
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        list-style: none;
+
+        li {
+            margin: 0 15px;
+
+            a {
+                color: white;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to(tablet) {
+        flex-direction: row;
+    }
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+
+    .top-news {
+        margin-bottom: 20px;
+
+        .top-news__item {
+            text-align: center;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            h1 {
+                font-size: 24px;
+                margin: 10px 0;
+            }
+
+            time {
+                color: gray;
+                font-size: 14px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .news-grid {
+        display: grid;
+        gap: 10px;
+
+        @include respond-to(mobile) {
+            grid-template-columns: 1fr;
+        }
+
+        @include respond-to(tablet) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include respond-to(desktop) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .news-item {
+            background-color: $secondary-color;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            h2 {
+                font-size: 18px;
+                margin: 10px 0;
+            }
+
+            time {
+                font-size: 12px;
+                color: gray;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+aside {
+    flex-basis: 300px;
+    background-color: $secondary-color;
+    padding: 20px;
+
+    @include respond-to(mobile) {
+        flex-basis: 100%;
+    }
+
+    @include respond-to(tablet) {
+        flex-basis: 300px;
+    }
+
+    h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .recent-news {
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin: 10px 0;
+
+            a {
+                text-decoration: none;
+                color: $primary-color;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            time {
+                font-size: 12px;
+                color: gray;
+                display: block;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $primary-color;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

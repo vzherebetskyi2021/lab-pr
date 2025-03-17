@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300" viewBox="0 0 600 300">
+  <rect width="600" height="300" fill="#3498db" />
+  <text x="50%" y="50%" fill="white" font-size="24" font-family="Arial" text-anchor="middle" dominant-baseline="middle">
+    Top News Image
+  </text>
+</svg>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PW4 - Методологія BEM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Семантичний header з основним меню -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="/" class="header__logo-link">
+                    <img src="http://www.w3.org/2000/svg" alt="Логотип Національного університету «Львівська політехніка»" class="header__logo-image">
+                    <h1 class="header__title">Національний університет «Львівська політехніка»</h1>
+                </a>
+            </div>
+            <button class="header__toggle" aria-label="Відкрити меню">
+                <span class="header__toggle-line"></span>
+                <span class="header__toggle-line"></span>
+                <span class="header__toggle-line"></span>
+            </button>
+            <div class="header__menu">
+                <nav class="main-nav">
+                    <ul class="main-nav__list">
+                        <li class="main-nav__item">
+                            <a href="https://lvivska-politekhnika" class="main-nav__link">Політехніка</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="https://institutes" class="main-nav__link">Інститути</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="https://osvita" class="main-nav__link">Освіта</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="https://nauka" class="main-nav__link">Наука</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="https://projects" class="main-nav__link">Проєкти</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="https://vstupnyku" class="main-nav__link">Вступнику</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="https://studentu" class="main-nav__link">Студенту</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="https://pratsivnyku" class="main-nav__link">Працівнику</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="lang-switcher">
+                    <ul class="lang-switcher__list">
+                        <li class="lang-switcher__item lang-switcher__item--active">
+                            <a href="/" class="lang-switcher__link">UK</a>
+                        </li>
+                        <li class="lang-switcher__item">
+                            <a href="/en" class="lang-switcher__link">EN</a>
+                        </li>
+                        <li class="lang-switcher__item">
+                            <a href="/de" class="lang-switcher__link">DE</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <form class="search__form" action="/search/node" method="get">
+                        <input type="search" class="search__input" placeholder="Пошук" name="keys">
+                        <button type="submit" class="search__button">
+                            <span class="search__button-text">Пошук</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Блок hero з новиною (варіант 1) -->
+    <section class="hero">
+        <div class="hero__container">
+            <div class="hero__background" style="background-image: url('hero-image.jpg');">
+                <div class="hero__overlay"></div>
+                <div class="hero__content">
+                    <h2 class="hero__title">
+                        <a href="https://news/rezultaty-holosuvannia-na-vyborakh-rektora" class="hero__link">
+                            Результати голосування на виборах ректора Національного університету «Львівська політехніка»
+                        </a>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Блок швидких посилань -->
+        <div class="shortcuts">
+            <div class="shortcuts__container">
+                <a href="https://lvivska-politekhnika/vybory-rektora-lvivskoi-politekhniky" class="shortcuts__item shortcuts__item--info">
+                    <h2 class="shortcuts__title">
+                        <i class="shortcuts__icon shortcuts__icon--info"></i>
+                        <span class="shortcuts__text">Вибори ректора</span>
+                    </h2>
+                </a>
+                <a href="https://politekhniky-dlia-peremohy" class="shortcuts__item shortcuts__item--handshake">
+                    <h2 class="shortcuts__title">
+                        <i class="shortcuts__icon shortcuts__icon--handshake"></i>
+                        <span class="shortcuts__text">Політехніки - для перемоги</span>
+                    </h2>
+                </a>
+                <a href="https://knyha-pamiati" class="shortcuts__item shortcuts__item--users">
+                    <h2 class="shortcuts__title">
+                        <i class="shortcuts__icon shortcuts__icon--users"></i>
+                        <span class="shortcuts__text">Книга пам'яті</span>
+                    </h2>
+                </a>
+                <a href="https://analitychni-statti" class="shortcuts__item shortcuts__item--chart">
+                    <h2 class="shortcuts__title">
+                        <i class="shortcuts__icon shortcuts__icon--chart"></i>
+                        <span class="shortcuts__text">Аналітичні статті</span>
+                    </h2>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секція з новинами університету -->
+    <section class="news">
+        <div class="news__container">
+            <h2 class="news__heading">Новини університету</h2>
+            <div class="news__list">
+                <article class="news__item news__item--featured">
+                    <div class="news__image-wrapper">
+                        <img src="news1.jpg" alt="Новина 1" class="news__image">
+                    </div>
+                    <div class="news__content">
+                        <h3 class="news__title">
+                            <a href="#" class="news__link">Результати голосування на виборах ректора</a>
+                        </h3>
+                        <p class="news__date">15 березня 2025</p>
+                        <p class="news__excerpt">В університеті відбулися вибори ректора. Дізнайтеся результати голосування.</p>
+                        <a href="#" class="news__read-more">Детальніше</a>
+                    </div>
+                </article>
+                <article class="news__item">
+                    <div class="news__image-wrapper">
+                        <img src="news2.jpg" alt="Новина 2" class="news__image">
+                    </div>
+                    <div class="news__content">
+                        <h3 class="news__title">
+                            <a href="#" class="news__link">Відкриття нової лабораторії</a>
+                        </h3>
+                        <p class="news__date">10 березня 2025</p>
+                        <p class="news__excerpt">В університеті відкрито нову лабораторію для досліджень у галузі штучного інтелекту.</p>
+                        <a href="#" class="news__read-more">Детальніше</a>
+                    </div>
+                </article>
+                <article class="news__item">
+                    <div class="news__image-wrapper">
+                        <img src="news3.jpg" alt="Новина 3" class="news__image">
+                    </div>
+                    <div class="news__content">
+                        <h3 class="news__title">
+                            <a href="#" class="news__link">Міжнародна конференція з інформаційних технологій</a>
+                        </h3>
+                        <p class="news__date">5 березня 2025</p>
+                        <p class="news__excerpt">Львівська політехніка приймає міжнародну конференцію з інформаційних технологій.</p>
+                        <a href="#" class="news__read-more">Детальніше</a>
+                    </div>
+                </article>
+            </div>
+            <a href="/news" class="news__all-link">Усі новини</a>
+        </div>
+    </section>
+
+    <!-- Footer з трьома колонками -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__column">
+                <h3 class="footer__title">Про університет</h3>
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="https://lvivska-politekhnika" class="footer__link">Про Університет</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="https://rektor" class="footer__link">Ректор Університету</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="https://istoriia-universytetu" class="footer__link">Історія Університету</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__title">Освіта</h3>
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="https://osvita/pro-osvitni-programy" class="footer__link">Про освітні програми</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="https://institutes" class="footer__link">Інститути</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="https://doktorantura-ta-aspirantura" class="footer__link">Докторантура та аспірантура</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__title">Контакти</h3>
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="https://contacts" class="footer__link">Контактна інформація</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="https://map" class="footer__link">Карта університету</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="https://feedback" class="footer__link">Зворотній зв'язок</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__copyright">© 2025 Національний університет «Львівська політехніка». Усі права захищено.</p>
+        </div>
+    </footer>
+</body>
+</html>
